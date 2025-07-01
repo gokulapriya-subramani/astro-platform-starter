@@ -22,7 +22,23 @@ const { title } = Astro.props;
         <meta name="generator" content={Astro.generator} />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       <link rel="preload" as="font" type="font/woff2" href={interWoff2} crossorigin />
-       <Fragment set:html={await import('../public/_leadfeeder.html?raw')} />
+       <script>
+      (function(ss, ex){
+        window.ldfdr = window.ldfdr || function(){
+          (ldfdr._q = ldfdr._q || []).push([].slice.call(arguments));
+        };
+        (function(d, s){
+          var fs = d.getElementsByTagName(s)[0];
+          function ce(src){
+            var cs = d.createElement(s);
+            cs.src = src;
+            cs.async = 1;
+            fs.parentNode.insertBefore(cs, fs);
+          }
+          ce('https://sc.lfeeder.com/lftracker_v1_JMvZ8gnqeqpa2pOd.js');
+        })(document, 'script');
+      })('JMvZ8gnqeqpa2pOd');
+    </script>
 </head>
     <body class="antialiased text-white bg-complementary">
         <div class="flex flex-col min-h-screen px-6 bg-noise sm:px-12">
